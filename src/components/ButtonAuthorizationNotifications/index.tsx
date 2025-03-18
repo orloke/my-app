@@ -19,6 +19,7 @@ export const ButtonAuthorizationNotifications = () => {
           console.log("🚀 ~ onClick={ ~ response:", response)
           setText(JSON.stringify(response))
         }}
+        className='bg-blue-500'
       >
         Notificação
       </button>
@@ -28,6 +29,7 @@ export const ButtonAuthorizationNotifications = () => {
         onClick={() =>
           sendLikeNotification('oiiii', 'Junior Dering')
         }
+        className='bg-red-500'
       >
         enviando notificacao
       </button>
