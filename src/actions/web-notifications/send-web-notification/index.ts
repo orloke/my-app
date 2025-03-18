@@ -5,12 +5,12 @@ import webPush from 'web-push'
 webPush.setVapidDetails(
   'mailto:seuemail@example.com',
   process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!,
+  process.env.VAPID_PRIVATE_KEY!
 )
 
 export async function sendLikeNotification(
   likedUserId: string,
-  likerName: string,
+  likerName: string
 ) {
   const payload = JSON.stringify({
     title: 'Nova curtida!',
@@ -19,11 +19,11 @@ export async function sendLikeNotification(
 
   const sub = {
     endpoint:
-      'https://fcm.googleapis.com/fcm/send/eLnE6oroHpU:APA91bF_wutnMVo0WwmIZ4L7LzHxs3MC_wvTsCYtf0Cmov5ORyO8bTTc5FbJxvhoey8ZcQ2-tt4V2fYVtu49k-90Upvt539lcPWbsR7kXvKP4QQSVIwwz18hM7UhsHns-D0G-S2zFoJV',
+      'https://fcm.googleapis.com/fcm/send/eT0fdIM6t9Y:APA91bFR-NTwZaSZ_TKZ4Q_2HZohNX54slnRfMFTHycXsOa5Us30Xtr2jf2dEfrRIxnt9JIadodq9z5hjIQJzn8YOmjHklDv5xGV6GKPRybSnHWjCsK0zk-rDIuDFvBrvs5SBbg_3RZq',
     keys: {
-      auth: '+RNoKJwwRGBhVI6khmD+iQ==',
       p256dh:
-        'BGxUQE9tccjysokaTZYb0/iaaATDtKtzYHik8+YTgT5sUYJQno6Q7rTA/IRh2aYkCjYCnanx3vOXovi1MY1hQX4=',
+        'BJri2XMCpy7AqKxnowiAoGN1EPoCIRr6fXfIDWsxCGC/tA0x88fyOvscla7LrEKNUx9O9vLr7wFQXrkTX+0XHPw=',
+      auth: '36ARhOrv2QK8mVHYqh7yWA==',
     },
   }
 
